@@ -1,4 +1,6 @@
 import './globals.css';
+import '../styles/sections.css';
+import Navbar from '@/components/Navbar';
 
 export const metadata = {
   title: 'Blush Consulting',
@@ -8,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
