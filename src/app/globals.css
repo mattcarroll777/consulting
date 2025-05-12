@@ -1,26 +1,73 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+/* Global Dark Theme Colors */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ============================
+   🔹 Layout & Section Styles
+=============================== */
+
+.section {
+  @apply max-w-3xl mx-auto px-4 py-16 space-y-6;
+}
+
+.section-title {
+  @apply text-2xl font-bold text-blue-300 border-b border-gray-700 pb-1;
+}
+
+/* ============================
+   🔹 Cards (e.g. Services)
+=============================== */
+
+.card {
+  @apply bg-gray-800 p-5 rounded-lg shadow hover:shadow-lg transition;
+}
+
+.card-title {
+  @apply text-lg font-semibold text-blue-300 mb-1;
+}
+
+.card-desc {
+  @apply text-sm text-gray-400;
+}
+
+/* ============================
+   🔹 Testimonials
+=============================== */
+
+.quote-block {
+  @apply bg-gray-800 p-6 rounded-xl shadow-inner border-l-4 border-blue-400;
+}
+
+.quote-text {
+  @apply italic text-gray-200;
+}
+
+.quote-footer {
+  @apply mt-4 text-sm text-blue-300 font-medium;
+}
+
+/* ============================
+   🔹 Contact
+=============================== */
+
+.contact-line {
+  @apply text-gray-300;
+}
+
+/* ============================
+   🔹 Footer
+=============================== */
+
+.footer {
+  @apply text-center pt-10 border-t border-gray-800 text-gray-500 text-sm;
 }
